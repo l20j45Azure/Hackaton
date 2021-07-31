@@ -5,21 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <section class="login">
+    <section class="container login">
         <form action="" class="login__form">
             <figure class="login__figure">
-                <img class="login__img" src="" alt="" />
+                <img class="login__img" src="img/LOGO-01.svg" alt="logo-baches" />
             </figure>
+            <input type="email" id="email" class="login__input" placeholder="Correo">
+            <input type="password" id="password" class="login__input" placeholder="Contraseña">
 
-            <div class="login__container-btn">
-                <a href="registrer.html" class="login__btn">Registrarse</a>
-            </div>
+            <button class="login__btn" id="btn-login">Iniciar sesión</button>
 
-            <div class="login__container-btn">
-                <a href="#" class="login__btn">Iniciar sesión</a>
-            </div>
+            <label class="login__text">
+                ¿No tienes una cuenta?
+                <a href="registrer.html" class="login__text pointer">Registrate</a>
+            </label>
+
+          
         </form>
     </section>
 </body>

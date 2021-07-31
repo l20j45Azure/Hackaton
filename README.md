@@ -1,2 +1,0 @@
-# Hackaton
-repositorio para programa
