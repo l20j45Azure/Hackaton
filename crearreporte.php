@@ -20,10 +20,52 @@
         <label for="" class="crearReporte__label">Ubicacion</label>
     <div id="map"></div>
     <div id="mapid" ></div>
-    <script>
+
+    <br>
+
+    <?php
+    if (isset($_SESSION['message']) && $_SESSION['message'])
+    {
+      printf('<b>%s</b>', $_SESSION['message']);
+      unset($_SESSION['message']);
+    }
+
+if($_COOKIE['archivosubido']!=TRUE){
+  ?>
+
+  <form method="POST" action="upload.php" enctype="multipart/form-data">
+    <div>
+    
+      <input type="file" name="uploadedFile" class="crearReporte__input" />
+    </div>
+
+    <input type="submit" name="uploadBtn" value="Subir"class="crearReporte__input"  />
+  </form>
+  <?php
+  }
+  ?>
+
+
+    <br>
+    <form action="registrarincidente.php" name="registro" method="POST">
+    <input type="hidden" id="latitud"  name="latitud" >
+    <input type="hidden" id="longitud" name="longitud" >
+    <input type="hidden" name="foto" value=<?php echo $_COOKIE['nombrearchivo']?>>
+    <input type="hidden" id="fecha" name="fecha">
+    <input type="hidden" id="hora" name="hora">
+    
+
+    <button type="submit" id="crearReporte_buton" >Reportar</button>
+    </form>
+    
+</section>
+</body>
+
+
+<script>
         function findMe() {
-            var latitude = 0;
-            var longitude = 0;
+            var latitude = 100;
+            var longitude = 100;
             var output = document.getElementById('map');
 
             if (navigator.geolocation) {
@@ -74,13 +116,22 @@
                 output.innerHTML = "<p>No se pudo obtener tu ubicación</p>";
             }
             navigator.geolocation.getCurrentPosition(localizacion, error);
+            var f = new Date();
+
+            document.registro.latitud.value = latitude;
+            document.registro.longitud.value = longitude;
+            document.registro.fecha.value = f.getFullYear() + "-" + (f.getMonth() +1) + "-" + f.getDate();
+            document.registro.hora.value = f.getHours() + ":" + f.getMinutes() + ":" + f.getSeconds();
+           
+
         }
     </script>
-    <br>
-    <input type="file" name="fotosubida"  class="crearReporte__input">
-    <br>
-    <button type="submit" id="crearReporte_buton" >Reportar</button>
 
-</section>
-</body>
+
+
+
+
+<script>
+
+</script>
 </html>
