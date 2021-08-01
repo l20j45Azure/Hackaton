@@ -45,3 +45,16 @@ body{
     border-radius: 12px;
     outline: none;
 }
+
+.button{
+    display: flex;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5vh;
+    border: none;
+    padding: 0;
+    border-radius: 12px;
+    outline: none;
+    justify-content: center;
+
+}

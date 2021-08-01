@@ -48,3 +48,16 @@ body{
     border-radius: 0 2em 2em 0;   
 }
 
+
+.menu__subtitle2{
+    background-color: var(--color-white);
+    color: var(--color-black);
+    width: 50%;
+    height: 2em;
+    line-height: 2em;
+    padding-left: 1em;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 0 2em 2em 0;   
+}
+

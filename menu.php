@@ -10,10 +10,21 @@
     <link rel="stylesheet" href="css/menu.css">
 </head>
 <body>
+
+<?php
+session_start();
+?>
+
     <main class="container menu">
         <h1 class="menu__title">MENÚ</h1>
+
+    <?php
+    echo "<section class='menu__subtitle2'>";
+    echo "Hola ". $_SESSION['usuario'];
+    echo "</section>";
+    ?>
         <section class="menu__subtitle">
-            <a href="perfil.html" class="menu__option">Ver perfil</a>
+            <a href="perfil.php" class="menu__option">Ver perfil</a>
         </section>
         <section class="menu__subtitle">
             <a href="#" class="menu__option">Crear reporte</a>

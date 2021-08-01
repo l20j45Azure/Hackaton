@@ -1,27 +1,25 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-
-    <title>Quick Start - Leaflet</title>
-
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/crearreportes.css">
     <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
-
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 
 
-
 </head>
-
-<body>
-
-    <button onclick="findMe()">Mostrar ubicación</button>
+<body onload="findMe();" >
+    <section class="container creaReporte">
+        <h1 class="crearReporte__title">Crear reporte</h1>
+    <br>
+        <label for="" class="crearReporte__label">Ubicacion</label>
     <div id="map"></div>
-    <div id="mapid" style="width: 600px; height: 400px;"></div>
+    <div id="mapid" ></div>
     <script>
         function findMe() {
             var latitude = 0;
@@ -64,34 +62,25 @@
                     fillColor: '#f03',
                     fillOpacity: 0.5
                 }).addTo(mymap).bindPopup("Probable zona");
-
-
-
                 function onMapClick(e) {
                     popup
                         .setLatLng(e.latlng)
                         .setContent("You clicked the map at " + e.latlng.toString())
                         .openOn(mymap);
                 }
-
                 mymap.on('click', onMapClick);
             }
-
             function error() {
                 output.innerHTML = "<p>No se pudo obtener tu ubicación</p>";
-
             }
-
             navigator.geolocation.getCurrentPosition(localizacion, error);
-
-
-
-
         }
     </script>
+    <br>
+    <input type="file" name="fotosubida"  class="crearReporte__input">
+    <br>
+    <button type="submit" id="crearReporte_buton" >Reportar</button>
 
-
-
+</section>
 </body>
-
 </html>
