@@ -29,7 +29,6 @@ if($_COOKIE['archivosubido']!=TRUE){
   </form>
   <?php
   }
-  else{}
   ?>
 </body>
 </html>

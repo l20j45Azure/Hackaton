@@ -1,9 +1,10 @@
 <?php
 session_start();
-
+echo "entro";
 $message = ''; 
-if (isset($_POST['uploadBtn']) && $_POST['uploadBtn'] == 'Upload')
+if (isset($_POST['uploadBtn']) && $_POST['uploadBtn'] == 'Subir')
 {
+  echo "entr";
   if (isset($_FILES['uploadedFile']) && $_FILES['uploadedFile']['error'] === UPLOAD_ERR_OK)
   {
     // get details of the uploaded file
@@ -30,6 +31,8 @@ if (isset($_POST['uploadBtn']) && $_POST['uploadBtn'] == 'Upload')
       {
         $message ='File is successfully uploaded.';
         setcookie("archivosubido",TRUE,time() + 10,"/");
+        setcookie("nombrearchivo",$newFileName,time() + 30,"/");
+        echo "<script type='text/javascript'>alert('subio el archivo');</script>";
       }
       else 
       {
@@ -49,4 +52,4 @@ if (isset($_POST['uploadBtn']) && $_POST['uploadBtn'] == 'Upload')
   }
 }
 $_SESSION['message'] = $message;
-header("Location: crearreporte.php");
+header("refresh:0;url=crearreporte.php");
