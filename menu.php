@@ -23,7 +23,7 @@ session_start();
     echo "</section>";
     ?>
         <section class="menu__subtitle">
-            <a href="perfil.html" class="menu__option">Ver perfil</a>
+            <a href="perfil.php" class="menu__option">Ver perfil</a>
         </section>
         <section class="menu__subtitle">
             <a href="#" class="menu__option">Crear reporte</a>

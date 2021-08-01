@@ -41,7 +41,13 @@ body{
     background-color: var(--color-black);
     font-weight: 300;
     border: none;
-    padding: 0;
+    padding-left: 3vw;
     border-radius: 12px;
     outline: none;
+}
+
+.perfil__input::placeholder{
+
+ color: white;
+
 }
