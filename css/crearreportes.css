@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+:root{
+    --color-yellow: #F5BA3B;
+    --color-white: #F5F5F5;
+    --color-black: #212226;
+}
+
+body{
+    background-color: var(--color-white);
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.crearReporte{
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.crearReporte__title{
+    font-size: 4rem;
+    text-align: center;
+    margin-left: 20%;
+    
+}
+
+.crearReporte__label{
+    margin-left: 20%;
+    margin-top: 5%;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.crearReporte__input{
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 1.2rem;
+}
+#map{
+    border-radius: 3px;
+}
+#mapid{
+    margin-left: 20%;
+    margin-right: 20%;
+    width: 70vw; 
+    height: 60vh;
+    border-radius: 20px ;
+    border-style: solid;
+}
+#crearReporte_buton{
+    margin-top: 3vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 30px;
+    font-size: 1.5rem;
+    background: var(--color-yellow);
+    border-radius: 10px;
+    border-style: none;
+}
