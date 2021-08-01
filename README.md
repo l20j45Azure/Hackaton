@@ -53,3 +53,5 @@ Fue gratificante ver como a pesar de ser de distintas carreras, o incluso simila
 Nuestro equipo se compuso de personas de distintos estados de la Republica Mexicana lo cual ayudo a enriquecer nuestra experiencia en este Summer Hack, ya que gracias a esto hemos obtenido nuevos contactos y amigos para poder colaborar en un futuro, también aprendimos de las habilidades y conocimientos del otro.
 
 Sin duda el participar en esta propuesta fue un desafío que nos dejó un acercamiento a lo que será el campo laboral y sin duda nos seguiremos preparando al contar con nuevas herramientas para contribuir a un mundo mejor.
+
+### [Accesa aqui](http://104.215.122.23/Hackaton/)
