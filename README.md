@@ -6,8 +6,9 @@
 
 ### Link al Tiktok
 
-### Diagrama de Azure
 
+### Diagrama de Azure
+![Diagrama](docs/Diagrama-01.jpg)
 
 ### Precio Total por mes
 ##### Pruebas
@@ -38,5 +39,15 @@
 | TOTAL | 99.84% |
 
 ### Tiempo sin disponibilidad a un año
+##### 5.25 horas
 
 ### Qué te pareció el evento
+En tan solo 40 horas cada uno de nosotros vivimos una experiencia retadora, la cual puso a prueba nuestras habilidades obtenidas a lo largo de Innovacción y también nuestra capacidad de trabajar en equipo al estar a distancia y de manera virtual.
+
+Las diversas actividades impartidas por los Sherpas junto con los Student Ambassadors fueron un punto clave para mantener el ambiente entusiasmado y ayudo a acercarnos más a nuestros compañeros. Nos permitió ir un poco más allá de lo que solemos hacer y crecer como personas.
+
+Fue gratificante ver como a pesar de ser de distintas carreras, o incluso similares, nuestros conocimientos se pudieron complementar con el fin de llegar al mejor resultado para solucionar la problemática encontrada.
+
+Nuestro equipo se compuso de personas de distintos estados de la Republica Mexicana lo cual ayudo a enriquecer nuestra experiencia en este Summer Hack, ya que gracias a esto hemos obtenido nuevos contactos y amigos para poder colaborar en un futuro, también aprendimos de las habilidades y conocimientos del otro.
+
+Sin duda el participar en esta propuesta fue un desafío que nos dejó un acercamiento a lo que será el campo laboral y sin duda nos seguiremos preparando al contar con nuevas herramientas para contribuir a un mundo mejor.
