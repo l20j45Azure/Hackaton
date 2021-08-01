@@ -1,3 +1,5 @@
+![Logo BachApp](img/LOGO-01.svg)
+
 # BachApp
 
 ## Introducción
@@ -5,7 +7,7 @@
 ##### Aplicacion Web para reportar baches en la ciudad, mientras que los encargados de mantenimiento de calles pueden encontrar los lugares exactos y tener una mejor idea de la gravedad y el material necesario para repararlos gracias a las fotografias.
 
 ### Link al Tiktok
-
+[Yo soy el link](https://vm.tiktok.com/ZMd3J9hb2/)
 
 ### Diagrama de Azure
 ![Diagrama](docs/Diagrama-01.jpg)
