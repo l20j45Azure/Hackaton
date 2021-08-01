@@ -6,7 +6,7 @@
 }
 
 body{
-    background-color: var(--color-white);
+    background-color: var(--color-yellow);
     font-family: 'Roboto', sans-serif;
 }
 
@@ -17,28 +17,28 @@ body{
     max-width: 1200px;
 }
 
-.perfil{
+.registrer{
     margin: 0 auto;
     height: 100vh;
 }
 
-.perfil__title{
+.registrer__title{
     font-size: 4rem;
     text-align: center;
 }
 
-.perfil__label{
+.registrer__label{
     margin-left: 20%;
     margin-top: 5%;
     font-weight: 700;
     font-size: 1.5rem;
 }
-.perfil__input{
+.registrer__input{
     margin-left: 20%;
     margin-right: 20%;
     height: 1.8em;
-    color: var(--color-white);
-    background-color: var(--color-black);
+    color: var(--color-black);
+    background-color: var(--color-white);
     font-weight: 300;
     border: none;
     padding: 0;
