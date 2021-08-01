@@ -27,7 +27,7 @@ session_start();
             <a href="perfil.php" class="menu__option">Ver perfil</a>
         </section>
         <section class="menu__subtitle">
-            <a href="#" class="menu__option">Crear reporte</a>
+            <a href="crearreporte.php" class="menu__option">Crear reporte</a>
         </section>
         <section class="menu__subtitle">
             <a href="#" class="menu__option">Consultar mapa</a>
