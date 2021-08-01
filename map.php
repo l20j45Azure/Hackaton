@@ -31,8 +31,8 @@
     ?>
     <script>
         function findMe() {
-            var latitude = 20.699238;
-            var longitude = -103.287229;
+            var latitude = 21.852503 ;
+            var longitude = -102.261558;
             var output = document.getElementById('map');
 
             if (navigator.geolocation) {

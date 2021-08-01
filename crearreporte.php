@@ -106,16 +106,17 @@ if($_COOKIE['archivosubido']!=TRUE){
                         .openOn(mymap);
                 }
                 mymap.on('click', onMapClick);
+                var f = new Date();
+
+document.registro.latitud.value = latitude;
+document.registro.longitud.value = longitude;
+document.registro.fecha.value = f.getFullYear() + "-" + (f.getMonth() +1) + "-" + f.getDate();
+document.registro.hora.value = f.getHours() + ":" + f.getMinutes() + ":" + f.getSeconds();
+
+
             }
 
             navigator.geolocation.getCurrentPosition(localizacion, error);
-            var f = new Date();
-
-            document.registro.latitud.value = latitude;
-            document.registro.longitud.value = longitude;
-            document.registro.fecha.value = f.getFullYear() + "-" + (f.getMonth() +1) + "-" + f.getDate();
-            document.registro.hora.value = f.getHours() + ":" + f.getMinutes() + ":" + f.getSeconds();
-           
 
         
     </script>

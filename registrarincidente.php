@@ -19,11 +19,12 @@ $idusuario = $_SESSION['idUsuario'];
   $conexion = mysqli_connect("localhost", "daniel", "daniel1", "Baches") or
     die("Problemas con la conexión");
 
-  mysqli_query($conexion, "INSERT INTO `reportes`(`idUsuario`, `latitud`, `longitud`, `foto`, `fecha`, `hora`) VALUES ('$idusuario','$latitude','$longitude','$foto','$fecha','$hora')")
+  mysqli_query($conexion, "INSERT INTO `reportes`(`idUsuario`, `latitud`, `longitud`, `foto`, `fecha`, `hora`) 
+  VALUES ('$idusuario','$latitude','$longitude','$foto','$fecha','$hora')")
 
 
 
-    or die("Problemas en el select" . mysqli_error($conexion));
+    or die("Problemas en el insert" . mysqli_error($conexion));
 
   mysqli_close($conexion);
 
