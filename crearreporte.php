@@ -48,11 +48,11 @@ if($_COOKIE['archivosubido']!=TRUE){
 
     <br>
     <form action="registrarincidente.php" name="registro" method="POST">
-    <input type="text" id="latitud"  name="latitud" >
-    <input type="text" id="longitud" name="longitud" >
-    <input type="text" name="foto" value=<?php echo $_COOKIE['nombrearchivo']?>>
-    <input type="text" id="fecha" name="fecha">
-    <input type="text" id="hora" name="hora">
+    <input type="hidden" id="latitud"  name="latitud" >
+    <input type="hidden" id="longitud" name="longitud" >
+    <input type="hidden" name="foto" value=<?php echo $_COOKIE['nombrearchivo']?>>
+    <input type="hidden" id="fecha" name="fecha">
+    <input type="hidden" id="hora" name="hora">
     
 
     <button type="submit" id="crearReporte_buton" >Reportar</button>
