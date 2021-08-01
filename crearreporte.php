@@ -64,23 +64,18 @@ if($_COOKIE['archivosubido']!=TRUE){
 
 <script>
         function findMe() {
-            var latitude = 100;
-            var longitude = 100;
+            var latitude = 21.852503 ;
+            var longitude = -102.261558;
             var output = document.getElementById('map');
 
-            if (navigator.geolocation) {
 
-            } else {
-                output.innerHTML = "<p>Tu navegador no soporta Geolocalizacion</p>";
-            }
 
 
             //Obtenemos latitud y longitud
-            function localizacion(posicion) {
 
 
-                latitude = posicion.coords.latitude;
-                longitude = posicion.coords.longitude;
+
+
                 var mensaje = "esta es tu casa"
 
                 var mymap = L.map('mapid').setView([latitude, longitude], 15);
@@ -112,9 +107,7 @@ if($_COOKIE['archivosubido']!=TRUE){
                 }
                 mymap.on('click', onMapClick);
             }
-            function error() {
-                output.innerHTML = "<p>No se pudo obtener tu ubicación</p>";
-            }
+
             navigator.geolocation.getCurrentPosition(localizacion, error);
             var f = new Date();
 
@@ -124,7 +117,7 @@ if($_COOKIE['archivosubido']!=TRUE){
             document.registro.hora.value = f.getHours() + ":" + f.getMinutes() + ":" + f.getSeconds();
            
 
-        }
+        
     </script>
 
 

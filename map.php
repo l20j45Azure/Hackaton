@@ -11,15 +11,28 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 </head>
-<body onload="mapLoad()">
+<body onload="findMe();" >
     <section class="container map">
         <h1 class="map__title">CONSULTAR MAPA</h1>
+        <div id="map"></div>
         <div id="mapid" class="map__area"></div>
     </section>
+
+
+
+    <?php
+  $conexion = mysqli_connect("localhost", "daniel", "daniel1", "Baches") or
+    die("Problemas con la conexión");
+
+  $registros = mysqli_query($conexion, "select latitud,longitud,fecha,hora
+                        from reportes") or
+    die("Problemas en el select:" . mysqli_error($conexion));
+
+    ?>
     <script>
         function findMe() {
-            var latitude = 100;
-            var longitude = 100;
+            var latitude = 20.699238;
+            var longitude = -103.287229;
             var output = document.getElementById('map');
 
             if (navigator.geolocation) {
@@ -30,11 +43,6 @@
 
 
             //Obtenemos latitud y longitud
-            function localizacion(posicion) {
-
-
-                latitude = posicion.coords.latitude;
-                longitude = posicion.coords.longitude;
                 var mensaje = "esta es tu casa"
 
                 var mymap = L.map('mapid').setView([latitude, longitude], 15);
@@ -48,28 +56,41 @@
                     zoomOffset: -1
                 }).addTo(mymap);
 
-                L.marker([latitude, longitude]).addTo(mymap)
-                    .bindPopup(mensaje);
+
+<?php
+  while ($reg = mysqli_fetch_array($registros)) {
+ 
+?>
+
+
+                L.marker([<?php echo $reg['latitud'];  ?>  , <?php echo $reg['longitud'];  ?>]).addTo(mymap)
+                    .bindPopup("<?php echo "fecha de reporte:".$reg['fecha']."<br>"."hora de reporte: ".$reg['hora']; ?>");
+
+
+
 
                 var popup = L.popup();
 
-                L.circle([latitude, longitude], 100, {
+                L.circle([<?php echo $reg['latitud'];  ?>  , <?php echo $reg['longitud'];  ?>], 100, {
                     color: 'red',
                     fillColor: '#f03',
                     fillOpacity: 0.5
                 }).addTo(mymap).bindPopup("Probable zona");
+
+                <?php
+  }
+?>
+                
                 function onMapClick(e) {
                     popup
                         .setLatLng(e.latlng)
                         .setContent("You clicked the map at " + e.latlng.toString())
                         .openOn(mymap);
-                }
+                
                 mymap.on('click', onMapClick);
             }
-            function error() {
-                output.innerHTML = "<p>No se pudo obtener tu ubicación</p>";
-            }
-            navigator.geolocation.getCurrentPosition(localizacion, error);
+   
+        
             var f = new Date();
 
             document.registro.latitud.value = latitude;

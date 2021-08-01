@@ -30,7 +30,7 @@ session_start();
             <a href="crearreporte.php" class="menu__option">Crear reporte</a>
         </section>
         <section class="menu__subtitle">
-            <a href="#" class="menu__option">Consultar mapa</a>
+            <a href="map.php" class="menu__option">Consultar mapa</a>
         </section>
         <section class="menu__subtitle">
             <a href="#" class="menu__option">Salir</a>
